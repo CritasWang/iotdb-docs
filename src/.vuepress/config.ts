@@ -20,6 +20,7 @@ import { getDirname, path } from 'vuepress/utils';
 import { viteBundler } from '@vuepress/bundler-vite';
 import { defineUserConfig } from 'vuepress';
 import theme from './theme.js';
+import { sitemapPlugin } from './plugins/sitemap/node/sitemapPlugin.js';
 
 const dirname = getDirname(import.meta.url);
 
@@ -102,6 +103,9 @@ _paq.push(['enableLinkTracking']);
       },
     },
   }),
+  plugins: [
+    sitemapPlugin({hostname: 'https://iotdb.apache.org/'}),
+  ],
   pagePatterns: [
     '**/*.md',
     '!**/*_timecho.md',

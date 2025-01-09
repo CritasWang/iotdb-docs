@@ -94,7 +94,7 @@ export default hopeTheme(
 
     plugins: {
       docsearch: {},
-
+      sitemap: false,
       redirect: {
         config: {
           '/UserGuide/Master/QuickStart/QuickStart.html':
